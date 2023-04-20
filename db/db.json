@@ -66,69 +66,61 @@
   "status": [
     {
       "id": 1,
-      "tipo": "Solicitado"
+      "tipo": "Solicitado",
+      "cor": "red"
     },
     {
       "id": 2,
-      "tipo": "Em produção"
+      "tipo": "Em produção",
+      "cor": "orange"
     },
     {
       "id": 3,
-      "tipo": "Finalizado"
+      "tipo": "Finalizado",
+      "cor": "green"
     }
   ],
   "burgers": [
     {
-      "nome": "Cleiver da Silva Soares",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Em produção",
-      "id": 5
-    },
-    {
-      "nome": "Desenvolvimento de sistemas",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Em produção",
-      "id": 6
-    },
-    {
-      "nome": "cirlene da silva soares",
+      "nome": "cleiver",
       "carne": "Maminha",
       "pao": "Parmesão e Orégano",
       "opcionais": [
-        "Bacon"
+        "Bacon",
+        "Salame"
       ],
-      "status": "Solicitado",
-      "id": 7
+      "status": "Finalizado",
+      "id": 10
     },
     {
-      "nome": "Desenvolvimento de sistemas",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
+      "nome": "leandro ",
+      "carne": "Maminha",
+      "pao": "Parmesão e Orégano",
       "opcionais": [
         "Bacon",
         "Salame"
       ],
-      "status": "Solicitado",
-      "id": 8
+      "status": "Finalizado",
+      "id": 11
     },
     {
-      "nome": "SFSFSF",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
+      "nome": "alterdata",
+      "carne": "Alcatra",
+      "pao": "Parmesão e Orégano",
       "opcionais": [
-        "Bacon"
+        "Bacon",
+        "Salame",
+        "Cebola roxa",
+        "Cheddar",
+        "Tomate",
+        "Pepino"
       ],
-      "status": "Solicitado",
-      "id": 9
+      "status": {
+        "id": 2,
+        "tipo": "Em produção",
+        "cor": "orange"
+      },
+      "id": 12
     }
   ]
 }

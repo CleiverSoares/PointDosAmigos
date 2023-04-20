@@ -1,5 +1,5 @@
 <template>
-<Message :msg="msg" v-show="msg" />
+  <Message :msg="msg" v-show="msg" />
   <div id="burger-table">
     <div>
       <div id="burger-table-heading">
@@ -25,13 +25,8 @@
           </ul>
         </div>
         <div>
-          <select name="status" class="status" @change="updateBurger($event, burger.id)">
-            <option value="">Selecione</option>
-            <option
-              v-for="s in status"
-              :key="s.id"
-              :value="s.tipo"
-              :selected="burger.status == s.tipo"
+          <select :style="{backgroundColor:burger.status.cor}" name="status" class="status" @change="updateBurger($event, burger.id)">
+            <option style="background-color: aliceblue;" v-for="s in status" :key="s.id" :value="s.tipo" :selected="burger.status.tipo == s.tipo" 
             >
               {{ s.tipo }}
             </option>
@@ -52,7 +47,7 @@ import Message from "@/components/Message.vue";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Dashboard",
-   components: {
+  components: {
     Message,
   },
 
@@ -89,16 +84,33 @@ export default {
       this.getPedidos()
       console.log(res);
     },
-async updateBurger(event, id) {
-      const req = await axios.patch(`http://localhost:3000/burgers/${id}`, {
-        status: event.target.value,
-      });
-      this.msg = `Status do pedido Nº ${id} atualizado para  ${req.data.status}!`;
-      setTimeout(() => (this.msg = ""), 4000);
+    async updateBurger(event, id) {
 
-      //actualizar a tablea
 
-      this.getPedidos();
+
+      for (let index = 0; index < this.status.length; index++) {
+        if (event.target.value == this.status[index].tipo) {
+          const req = await axios.patch(`http://localhost:3000/burgers/${id}`, {
+            status: this.status[index],
+          });
+          console.log(req);
+
+          this.msg = `Status do pedido Nº ${id} atualizado para  ${req.data.status.tipo}!`;
+          setTimeout(() => (this.msg = ""), 4000);
+
+          //actualizar a tablea
+
+          this.getPedidos();
+          return
+        }
+      }
+
+
+
+
+
+
+
     },
   },
   mounted() {
@@ -125,24 +137,29 @@ async updateBurger(event, id) {
   padding: 12px;
   border-bottom: 3px solid #333;
 }
+
 #burger-table-heading div,
 .burger-table-row div {
   width: 19%;
 }
+
 .burger-table-row {
   width: 100%;
   padding: 12px;
   border-bottom: 1px solid #ccc;
 }
+
 #burger-table-heading .order-id,
 .burger-table-row .order-number {
   width: 5%;
 }
+
 select {
   padding: 12px 6px;
   margin-right: 12px;
   border-radius: 5px;
 }
+
 .delete-btn {
   background-color: #222;
   color: var(--c-default);
@@ -155,6 +172,7 @@ select {
   transition: 0.5s;
   border-radius: 5px;
 }
+
 .delete-btn:hover {
   background-color: transparent;
   color: #222;
