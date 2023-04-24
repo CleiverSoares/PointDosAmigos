@@ -71,4 +71,11 @@ i {
   margin: 0 04px;
   padding: 18px;
 }
+
+@media screen and (max-width: 300px) {
+ 
+  #footer{
+    width: 130%;
+  }
+}
 </style>

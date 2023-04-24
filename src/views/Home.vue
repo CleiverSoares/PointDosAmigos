@@ -1,9 +1,12 @@
 <template>
-  <Banner />
-  <div class="main-container">
-    <h1>Monte o seu burger:</h1>
-    <BurgerForm />
-  </div>
+
+    <Banner />
+    <div class="main-container home">
+      <h1>Monte o seu burger:</h1>
+      
+      <BurgerForm />
+      
+    </div>
 </template>
 <script>
 import Banner from "@/components/Banner.vue"
@@ -16,4 +19,6 @@ export default {
   }
 }
 </script>
-<style scoped></style>
+<style scoped>
+
+</style>

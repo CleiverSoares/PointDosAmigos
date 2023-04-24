@@ -80,47 +80,23 @@
       "cor": "green"
     }
   ],
-  "burgers": [
-    {
-      "nome": "cleiver",
-      "carne": "Maminha",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Finalizado",
-      "id": 10
-    },
+  "pedido": [
     {
       "nome": "leandro ",
       "carne": "Maminha",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Finalizado",
-      "id": 11
-    },
-    {
-      "nome": "alterdata",
-      "carne": "Alcatra",
-      "pao": "Parmesão e Orégano",
+      "pao": "3 Queijos",
       "opcionais": [
         "Bacon",
         "Salame",
-        "Cebola roxa",
-        "Cheddar",
-        "Tomate",
-        "Pepino"
+        "Cebola roxa"
       ],
       "status": {
         "id": 2,
         "tipo": "Em produção",
         "cor": "orange"
       },
-      "id": 12
+      "telefone": 2196652655,
+      "id": 2
     }
   ]
 }

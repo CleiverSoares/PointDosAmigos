@@ -3,8 +3,19 @@
     <router-link class="link-nav" to="/" id="logo-url">
       <img :src="logo" :alt="alt" id="logo" />
     </router-link>
-    <router-link class="link-nav " to="/">Home</router-link>
-    <router-link class="link-nav" to="/Pedidos">Pedidos</router-link>
+    <router-link class="link-nav " to="/">
+      <a>Home</a>
+    </router-link>
+    <router-link class="link-nav" to="/Pedidos">
+      <a>
+        Pedidos
+      </a>
+    </router-link>
+    <router-link class="link-nav" to="/Galeria">
+      <a>
+        Galeria
+      </a>
+    </router-link>
   </div>
 </template>
 
@@ -29,9 +40,9 @@ export default {
 
 <style scoped>
 
-.link-nav:active{
-    color: #fff;
-    text-decoration: overline !important;
+a.router-link-exact-active {
+  font-size: 1.5rem;
+  margin-bottom: 2px;
 }
 #nav {
   background-color: #222;
@@ -62,5 +73,11 @@ export default {
 }
 #nav a:hover {
   color: #fff;
+}
+@media screen and (max-width: 450px) {
+  a{
+
+    font-size: 15px;
+  }
 }
 </style>
